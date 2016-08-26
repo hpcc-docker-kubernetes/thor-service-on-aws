@@ -1,2 +1,2 @@
 # thor-service-on-aws
-Will demostrate set thor ip with kubernetes service which will not change when the thor is restarted/recreated
+Will demostrate set thor ip with kubernetes service which will not change when the thor is restarted/recreated. We already make roxie and esp behind load balancers and environemnt.xml only has load balancers for others HPCC nodes. There are three shared environment on NFS file server: roxie, esp and dali/thor/support node. For roxie and esp it has localhost for local component in their environemnt.xml
