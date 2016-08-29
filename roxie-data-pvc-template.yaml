@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: roxie-data-<INDEX>
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: <ROXIE_VOLUME_SIZE>Gi

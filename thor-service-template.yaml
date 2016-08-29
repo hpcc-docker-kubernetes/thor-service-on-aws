@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: thor<INDEX>
+  labels: 
+     app: thor<INDEX>
+spec: 
+  ports: 
+#define THOR_BASE_PORT                  20000 //..~20099
+#define THOR_BASESLAVE_PORT             20100 //..~20199
+#assume max slavesPerNode is 4
+    - name: slave1-<INDEX>
+      protocol: TCP
+      port: 20100
+      targetPort: 20100
+    - name: slave2-<INDEX>
+      protocol: TCP
+      port: 20101
+      targetPort: 20101
+    - name: slave3-<INDEX>
+      protocol: TCP
+      port: 20102
+      targetPort: 20102
+    - name: slave4-<INDEX>
+      protocol: TCP
+      port: 20103
+      targetPort: 20103
+
+    - name: ssh
+      protocol: TCP
+      port: 22
+      targetPort: 22
+    - name: dfs
+      protocol: TCP
+      port: 7100
+      targetPort: 7100
+  selector: 
+     app: thor-rc<INDEX>
