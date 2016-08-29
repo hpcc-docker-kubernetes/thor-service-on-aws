@@ -3,8 +3,8 @@ r-service-on-aws
 Will demostrate set thor ip with kubernetes service which will not change when the thor is restarted/recreated. We already make roxie and esp behind load balancers and environemnt.xml only has load balancers for others HPCC nodes. There are three shared environment on NFS file server: roxie, esp and dali/thor/support node. For roxie and esp it has localhost for local component in their environemnt.xml
 
 # This still does not work
-## Thor start hang
-## Even thor started (without dafilesrv) playground sample fails: 
+##1 Thor start hang
+##2 Even thor started (without dafilesrv) playground sample fails: 
 '''sh
 00000018 2016-08-29 17:01:22.129  2609  2609 "Registration confirmation from 10.0.188.179:20100"
 00000019 2016-08-29 17:01:22.129  2609  2609 "Slave 1 (10.0.188.179:20100) registered"
