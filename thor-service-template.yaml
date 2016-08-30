@@ -35,4 +35,4 @@ spec:
       port: 7100
       targetPort: 7100
   selector: 
-     app: thor-rc<INDEX>
+     app: thor<INDEX>

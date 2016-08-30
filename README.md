@@ -3,9 +3,22 @@ r-service-on-aws
 Will demostrate set thor ip with kubernetes service which will not change when the thor is restarted/recreated. We already make roxie and esp behind load balancers and environemnt.xml only has load balancers for others HPCC nodes. There are three shared environment on NFS file server: roxie, esp and dali/thor/support node. For roxie and esp it has localhost for local component in their environemnt.xml
 
 # This still does not work
-##1 Thor start hang
-##2 Even thor started (without dafilesrv) playground sample fails: 
+##1 Playground Simple Filter 
 '''sh
+Workunit event:
+Error	eclagent	10056	System error: 10056: Watchdog has lost contact with Thor slave: 10.0.31.149:20100 (Process terminated or node down?)
+
+thormaster log:
+00000068 2016-08-30 14:35:08.141  1953  1967 "ERROR: 10056: /var/lib/jenkins2/woo
+rkspace/CE-Candidate-6.0.4-1/CE/ubuntu-14.04-amd64/HPCC-Platform/thorlcr/master//
+thgraphmanager.cpp(958) : abortThor : Watchdog has lost contact with Thor slave::
+ 10.0.31.149:20100 (Process terminated or node down?)"
+'''
+
+##2 Playground Simple Filter 
+The same workunit event as above
+'''sh
+thormaster log:
 00000018 2016-08-29 17:01:22.129  2609  2609 "Registration confirmation from 10.0.188.179:20100"
 00000019 2016-08-29 17:01:22.129  2609  2609 "Slave 1 (10.0.188.179:20100) registered"
 0000001A 2016-08-29 17:06:00.165  2609  2622 "Watchdog : Unknown Machine! [10.244.1.5:20100]"

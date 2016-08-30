@@ -18,6 +18,8 @@ spec:  # specification of the pod’s contents
           name: config-roxie
         - mountPath: /etc/HPCCSystems_Esp
           name: config-esp
+        - mountPath: /etc/HPCCSystems_Thor
+          name: config-thor
       stdin: true
       tty: true
       env:
@@ -35,3 +37,6 @@ spec:  # specification of the pod’s contents
     - name: config-esp
       persistentVolumeClaim:
         claimName: config-esp
+    - name: config-thor
+      persistentVolumeClaim:
+        claimName: config-thor
