@@ -9,6 +9,22 @@ spec:
 #define THOR_BASE_PORT                  20000 //..~20099
 #define THOR_BASESLAVE_PORT             20100 //..~20199
 #assume max slavesPerNode is 4
+    - name: slaveconn1-<INDEX>
+      protocol: TCP
+      port: 6400
+      targetPort: 6400
+    - name: slaveconn2-<INDEX>
+      protocol: TCP
+      port: 6401
+      targetPort: 6401
+    - name: slaveconn3-<INDEX>
+      protocol: TCP
+      port: 6402
+      targetPort: 6402
+    - name: slaveconn4-<INDEX>
+      protocol: TCP
+      port: 6403
+      targetPort: 6403
     - name: slave1-<INDEX>
       protocol: TCP
       port: 20100
