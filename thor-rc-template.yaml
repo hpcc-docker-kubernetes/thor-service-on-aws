@@ -17,7 +17,7 @@ spec:
           securityContext:
             privileged: true
           volumeMounts:
-            - mountPath: /etc/HPCCSystems/thor
+            - mountPath: /etc/HPCCSystems
               name: config
             - mountPath: /var/lib/HPCCSystems
               name: libdata
